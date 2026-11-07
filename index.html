@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Website Header</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            height: 53px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7.6%;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        /* Email and Location */
+        .top-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .email,
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            color: #999999;
+            font-size: 14px;
+            padding: 0 25px;
+            height: 25px;
+        }
+
+        .email {
+            padding-left: 0;
+            border-right: 1px solid #eeeeee;
+        }
+
+        .email i,
+        .location i {
+            color: #f35525;
+            font-size: 19px;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            background-color: #cccccc;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .social-icons a:hover {
+            background-color: #f35525;
+            transition: 0.3s;
+        }
+
+        /* Navigation Bar */
+        header {
+            height: 106px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7.6%;
+            background-color: white;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: black;
+        }
+
+        /* Navigation Links */
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 65px;
+            margin-left: auto;
+            margin-right: 45px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222222;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a:hover,
+        nav .active {
+            color: #f35525;
+        }
+
+        /* Schedule Button */
+        .visit-btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #1e1e1e;
+            color: #f35525;
+            border: none;
+            border-radius: 30px;
+            padding: 0 20px 0 0;
+            height: 45px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Calendar Icon */
+        .calendar {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            background-color: #f35525;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+
+        <div class="top-left">
+
+            <div class="email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@company.com</span>
+            </div>
+
+            <div class="location">
+                <i class="fa-solid fa-map"></i>
+                <span>Sunny Isles Beach, FL 33160</span>
+            </div>
+
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <div class="logo">
+            VILLA
+        </div>
+
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Properties</a>
+            <a href="#">Property Details</a>
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <button class="visit-btn">
+
+            <span class="calendar">
+                <i class="fa-solid fa-calendar"></i>
+            </span>
+
+            Schedule a visit
+
+        </button>
+
+    </header>
+
+</body>
+</html>
