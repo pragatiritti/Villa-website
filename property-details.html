@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Villa - Property-details</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* TOP CONTACT BAR */
+
+        .top-bar {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 11px;
+            color: #777;
+        }
+
+        .top-left {
+            display: flex;
+            gap: 30px;
+        }
+
+        .top-left i {
+            color: #f35525;
+            margin-right: 7px;
+        }
+
+        .top-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .top-social a {
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        /* NAVBAR */
+
+        .villa-navbar {
+            background: white;
+            padding: 15px 0;
+        }
+
+        .villa-navbar .navbar-brand {
+            font-size: 25px;
+            font-weight: bold;
+            color: #1e1e1e;
+        }
+
+        .villa-navbar .nav-link {
+            font-size: 13px;
+            color: #1e1e1e;
+            margin: 0 12px;
+        }
+
+        .villa-navbar .nav-link:hover,
+        .villa-navbar .nav-link.active {
+            color: #f35525;
+        }
+
+        /* SCHEDULE BUTTON */
+
+        .schedule-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #1e1e1e;
+            color: white;
+            padding: 5px 15px 5px 5px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .schedule-link i {
+            background: #f35525;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .schedule-link:hover {
+            background: #f35525;
+            color: white;
+        }
+        /* SINGLE PROPERTY BANNER */
+
+.single-property-banner {
+    width: 100%;
+    height: 240px;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.75),
+                        rgba(0, 0, 0, 0.75)),
+        url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.single-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    background-color: white;
+    padding: 9px 18px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.breadcrumb a {
+    color: black;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: black;
+}
+
+/* HEADING */
+
+.single-banner-content h1 {
+    color: white;
+    font-size: 34px;
+    font-weight: 800;
+    margin: 0;
+}
+/* PROPERTY DETAILS SECTION */
+
+.property-details-section {
+    padding: 50px 0 70px;
+    background-color: white;
+}
+
+.details-villa-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.details-villa-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CATEGORY */
+
+.details-category {
+    display: inline-block;
+    background-color: #fbd9cf;
+    color: #333;
+    font-size: 11px;
+    padding: 5px 10px;
+    margin-top: 15px;
+}
+
+/* ADDRESS */
+
+.details-address {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+.property-details-section hr {
+    border-color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* DESCRIPTION */
+
+.details-description p {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ACCORDION */
+
+.details-accordion {
+    background-color: #fafafa;
+    padding: 12px 15px;
+    margin-top: 25px;
+}
+
+.details-accordion .accordion-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+
+.details-accordion .accordion-button {
+    background-color: transparent;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 0;
+    box-shadow: none;
+}
+
+.details-accordion .accordion-button:not(.collapsed) {
+    color: #f35525;
+    background-color: transparent;
+}
+
+.details-accordion .accordion-button::after {
+    display: none;
+}
+
+.details-accordion .accordion-body {
+    font-size: 11px;
+    color: #777;
+    line-height: 1.8;
+    padding: 5px 0 15px;
+}
+
+/* FEATURE BOX */
+
+.details-feature-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+}
+
+.details-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.details-feature:last-child {
+    border-bottom: none;
+}
+
+.details-feature img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.details-feature h5 {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 0 3px;
+}
+
+.details-feature p {
+    font-size: 10px;
+    color: #aaa;
+    margin: 0;
+}
+
+        </style>
+
+</head>
+
+<body>
+
+    <!-- TOP CONTACT BAR -->
+
+    <div class="top-bar">
+
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="top-left">
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@company.com
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-map"></i>
+                    Sunny Isles Beach, FL 33160
+                </span>
+
+            </div>
+
+            <div class="top-social">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg villa-navbar">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">VILLA</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#villaNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="villaNav">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="properties.html">Properties</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="property-details.html">Property Details</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="schedule-link">
+                            <i class="fa-solid fa-calendar"></i>
+                            Schedule a visit
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- SINGLE PROPERTY BANNER -->
+
+<section class="single-property-banner">
+
+    <div class="single-banner-content">
+
+        <div class="breadcrumb">
+            <a href="index.html">HOME</a>
+            <span>/</span>
+            <span>SINGLE PROPERTY</span>
+        </div>
+
+        <h1>SINGLE PROPERTY</h1>
+
+    </div>
+
+</section>
+<!-- PROPERTY DETAILS SECTION -->
+
+<section class="property-details-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-8">
+
+                <!-- Property Image -->
+                <div class="details-villa-image">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9"
+                         alt="Luxury Villa">
+                </div>
+
+                <!-- Property Category -->
+                <span class="details-category">Apartment</span>
+
+                <!-- Property Address -->
+                <h4 class="details-address">
+                    24 New Street Miami, OR 24560
+                </h4>
+
+                <hr>
+
+                <!-- Description -->
+                <div class="details-description">
+
+                    <p>
+                        Get the best villa experience with this beautiful
+                        property. This villa offers a comfortable living
+                        space with modern facilities and beautiful interiors.
+                        It provides a peaceful environment for your family.
+                    </p>
+
+                    <p>
+                        When you look for the best property, you can enjoy
+                        spacious rooms, modern facilities and a beautiful
+                        outdoor environment. This property is designed
+                        to provide comfort and convenience.
+                    </p>
+
+                </div>
+
+                <!-- ACCORDION -->
+                <div class="details-accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-button" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#usefulLinks">
+                            Best useful links ?
+                        </button>
+
+                        <div id="usefulLinks"
+                             class="accordion-collapse collapse show"
+                             data-bs-parent="#propertyAccordion">
+                            <div class="accordion-body">
+                                Dolor almesit amet, consectetur adipiscing
+                                elit, sed doesn't eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Duis aute
+                                irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#howWorks">
+                            How does this work ?
+                        </button>
+
+                        <div id="howWorks"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#propertyAccordion">
+                            <div class="accordion-body">
+                                Choose your favourite property and contact
+                                our team to schedule a visit.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#whyBest">
+                            Why is Villa the best ?
+                        </button>
+
+                        <div id="whyBest"
+                             class="accordion-collapse collapse"
+                             data-bs-parent="#propertyAccordion">
+                            <div class="accordion-body">
+                                We offer beautiful properties with modern
+                                facilities and comfortable living spaces.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE FEATURE BOX -->
+            <div class="col-lg-4">
+
+                <div class="details-feature-box">
+
+                    <div class="details-feature">
+
+                        <img src="250m.png" alt="Space">
+
+                        <div>
+                            <h5>450 m2</h5>
+                            <p>Total Flat Space</p>
+                        </div>
+
+                    </div>
+
+                    <div class="details-feature">
+
+                        <img src="contract.png" alt="Contract">
+
+                        <div>
+                            <h5>Contract</h5>
+                            <p>Contract Ready</p>
+                        </div>
+
+                    </div>
+
+                    <div class="details-feature">
+
+                        <img src="payment.png" alt="Payment">
+
+                        <div>
+                            <h5>Payment</h5>
+                            <p>Payment Process</p>
+                        </div>
+
+                    </div>
+
+                    <div class="details-feature">
+
+                        <img src="safety.png" alt="Safety">
+
+                        <div>
+                            <h5>Safety</h5>
+                            <p>24/7 Under Control</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

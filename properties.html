@@ -1,0 +1,625 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Villa - Properties</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* TOP CONTACT BAR */
+
+        .top-bar {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 11px;
+            color: #777;
+        }
+
+        .top-left {
+            display: flex;
+            gap: 30px;
+        }
+
+        .top-left i {
+            color: #f35525;
+            margin-right: 7px;
+        }
+
+        .top-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .top-social a {
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        /* NAVBAR */
+
+        .villa-navbar {
+            background: white;
+            padding: 15px 0;
+        }
+
+        .villa-navbar .navbar-brand {
+            font-size: 25px;
+            font-weight: bold;
+            color: #1e1e1e;
+        }
+
+        .villa-navbar .nav-link {
+            font-size: 13px;
+            color: #1e1e1e;
+            margin: 0 12px;
+        }
+
+        .villa-navbar .nav-link:hover,
+        .villa-navbar .nav-link.active {
+            color: #f35525;
+        }
+
+        /* SCHEDULE BUTTON */
+
+        .schedule-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #1e1e1e;
+            color: white;
+            padding: 5px 15px 5px 5px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .schedule-link i {
+            background: #f35525;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .schedule-link:hover {
+            background: #f35525;
+            color: white;
+        }
+
+        /* PROPERTIES BANNER */
+
+        .properties-banner {
+            height: 220px;
+
+            background-image:
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* BREADCRUMB */
+
+        .breadcrumb-box {
+            background: white;
+            padding: 10px 18px;
+            margin-bottom: 15px;
+            font-size: 11px;
+        }
+
+        .breadcrumb-box a {
+            color: #1e1e1e;
+            text-decoration: none;
+        }
+
+        .breadcrumb-box span {
+            margin: 0 7px;
+        }
+
+        /* HEADING */
+
+        .banner-content h1 {
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        /* FILTER BUTTONS */
+
+        .property-filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 65px 15px;
+        }
+
+        .filter-btn {
+            background: #1e1e1e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 13px 25px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #f35525;
+        }
+.properties-section {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.properties-section h2 {
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+.property-card {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.property-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.property-type {
+    background-color: #fbd9cf;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.price {
+    color: #f35525;
+    font-weight: bold;
+}
+
+.property-card h5 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.property-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+}
+
+.visit-btn {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.visit-btn:hover {
+    background-color: #f35525;
+    transition: 0.3s;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- TOP CONTACT BAR -->
+
+    <div class="top-bar">
+
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="top-left">
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@company.com
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-map"></i>
+                    Sunny Isles Beach, FL 33160
+                </span>
+
+            </div>
+
+            <div class="top-social">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg villa-navbar">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">VILLA</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#villaNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="villaNav">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="properties.html">Properties</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="property-details.html">Property Details</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="schedule-link">
+                            <i class="fa-solid fa-calendar"></i>
+                            Schedule a visit
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- PROPERTIES BANNER -->
+
+    <section class="properties-banner">
+
+        <div class="banner-content">
+
+            <div class="breadcrumb-box">
+
+                <a href="index.html">HOME</a>
+
+                <span>/</span>
+
+                <a href="properties.html">PROPERTIES</a>
+
+            </div>
+
+            <h1>PROPERTIES</h1>
+
+        </div>
+
+    </section>
+
+
+   <!-- Properties Section -->
+<section class="properties-section py-5">
+
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="text-center mb-5">
+            <p class="text-danger fw-bold">| PROPERTIES</p>
+            <h2 class="fw-bold">We Provide The Best Property You Like</h2>
+        </div>
+
+        <!-- Property Cards -->
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9"
+                         class="img-fluid" alt="Luxury villa">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Luxury Villa</span>
+                        <h5 class="price">$2,264,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">18 Old Street Miami, OR 97219</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>8</b></span>
+                        <span>Bathrooms: <b>8</b></span>
+                        <span>Area: <b>545m²</b></span>
+                        <span>Floor: <b>3</b></span>
+                        <span>Parking: <b>6 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                         class="img-fluid" alt="Modern villa">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Modern Villa</span>
+                        <h5 class="price">$1,180,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">54 New Street Florida, USA</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>6</b></span>
+                        <span>Bathrooms: <b>5</b></span>
+                        <span>Area: <b>450m²</b></span>
+                        <span>Floor: <b>2</b></span>
+                        <span>Parking: <b>4 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+                         class="img-fluid" alt="Apartment">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Apartment</span>
+                        <h5 class="price">$1,460,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">26 Mid Street Portland, USA</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>5</b></span>
+                        <span>Bathrooms: <b>4</b></span>
+                        <span>Area: <b>320m²</b></span>
+                        <span>Floor: <b>2</b></span>
+                        <span>Parking: <b>3 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+                         class="img-fluid" alt="Family house">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Family House</span>
+                        <h5 class="price">$980,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">12 Hope Street Miami, USA</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>4</b></span>
+                        <span>Bathrooms: <b>3</b></span>
+                        <span>Area: <b>280m²</b></span>
+                        <span>Floor: <b>2</b></span>
+                        <span>Parking: <b>2 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+                         class="img-fluid" alt="Luxury apartment">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Luxury Apartment</span>
+                        <h5 class="price">$1,250,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">22 New Avenue Florida, USA</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>5</b></span>
+                        <span>Bathrooms: <b>4</b></span>
+                        <span>Area: <b>350m²</b></span>
+                        <span>Floor: <b>3</b></span>
+                        <span>Parking: <b>3 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+                         class="img-fluid" alt="Modern house">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Modern House</span>
+                        <h5 class="price">$1,560,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">34 Lake Road Miami, USA</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>6</b></span>
+                        <span>Bathrooms: <b>5</b></span>
+                        <span>Area: <b>420m²</b></span>
+                        <span>Floor: <b>3</b></span>
+                        <span>Parking: <b>4 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+            <!-- Card 7 - New -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+                         class="img-fluid" alt="Beautiful villa">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Beautiful Villa</span>
+                        <h5 class="price">$1,850,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">45 Green Avenue Miami, USA</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>7</b></span>
+                        <span>Bathrooms: <b>6</b></span>
+                        <span>Area: <b>500m²</b></span>
+                        <span>Floor: <b>3</b></span>
+                        <span>Parking: <b>5 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+            <!-- Card 8 - New -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
+                         class="img-fluid" alt="Contemporary home">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Contemporary Home</span>
+                        <h5 class="price">$1,320,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">67 Palm Street Florida, USA</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>5</b></span>
+                        <span>Bathrooms: <b>4</b></span>
+                        <span>Area: <b>380m²</b></span>
+                        <span>Floor: <b>2</b></span>
+                        <span>Parking: <b>3 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+            <!-- Card 9 - New -->
+            <div class="col-lg-4 col-md-6">
+                <div class="property-card">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                         class="img-fluid" alt="Premium house">
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="property-type">Premium House</span>
+                        <h5 class="price">$2,050,000</h5>
+                    </div>
+
+                    <h5 class="mt-2">89 Ocean Road Miami, USA</h5>
+
+                    <div class="property-details">
+                        <span>Bedrooms: <b>8</b></span>
+                        <span>Bathrooms: <b>7</b></span>
+                        <span>Area: <b>560m²</b></span>
+                        <span>Floor: <b>3</b></span>
+                        <span>Parking: <b>6 spots</b></span>
+                    </div>
+
+                    <button class="visit-btn">Schedule a visit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- BOOTSTRAP JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
