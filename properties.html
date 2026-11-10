@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -46,28 +44,28 @@
         }
 
         .social-icons {
-    display: flex;
-    gap: 10px;
-}
+            display: flex;
+            gap: 10px;
+        }
 
-.social-icons a {
-    width: 35px;
-    height: 35px;
-    background-color: #eeeeee;
-    color: #1e1e1e;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+        .social-icons a {
+            width: 35px;
+            height: 35px;
+            background-color: #eeeeee;
+            color: #1e1e1e;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
-.social-icons a:hover {
-    background-color: #f35525;
-    color: white;
-    transform: translateY(-5px);
-}
+        .social-icons a:hover {
+            background-color: #f35525;
+            color: white;
+            transform: translateY(-5px);
+        }
 
         /* NAVBAR */
 
@@ -128,7 +126,7 @@
             height: 220px;
 
             background-image:
-                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c");
 
             background-size: cover;
@@ -198,112 +196,396 @@
         .filter-btn:hover {
             background: #f35525;
         }
-.properties-section {
-    background-color: #fff;
-    padding: 80px 0;
+
+        .properties-section {
+            background-color: #fff;
+            padding: 80px 0;
+        }
+
+        .properties-section h2 {
+            font-size: 32px;
+            margin-top: 15px;
+        }
+
+        .property-card {
+            background-color: #fafafa;
+            padding: 20px;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .property-type {
+            background-color: #fbd9cf;
+            padding: 7px 12px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        .price {
+            color: #f35525;
+            font-weight: bold;
+        }
+
+        .property-card h5 {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .property-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 13px;
+        }
+
+        .visit-btn {
+            display: block;
+            margin: 20px auto 0;
+            background-color: #1e1e1e;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+
+        .visit-btn:hover {
+            background-color: #f35525;
+            transition: 0.3s;
+        }
+
+        .pagination-section {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .pagination {
+            display: flex;
+            gap: 10px;
+        }
+
+        .pagination .page-link {
+            color: black;
+            background-color: #f1f1f1;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .pagination .page-link:hover,
+        .pagination .page-item.active .page-link {
+            background-color: #f35525;
+            color: white;
+        }
+
+        .copyright-footer {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            width: 100%;
+        }
+
+        .copyright-footer p {
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* TABLET RESPONSIVE - 768px to 991px */
+        @media (max-width: 991px) {
+
+            /* Navbar */
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            /* Property cards */
+            .property-card {
+                margin-bottom: 25px;
+            }
+
+            /* Property details */
+            .details-villa-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .details-feature-box {
+                margin-top: 30px;
+            }
+
+            /* Contact section */
+            .contact-map iframe {
+                height: 350px;
+            }
+
+        }
+
+
+        /* MOBILE RESPONSIVE - Below 768px */
+        @media (max-width: 767px) {
+
+            /* Top contact bar */
+            .top-bar {
+                display: none;
+            }
+
+            /* Navbar */
+            .navbar {
+                padding: 12px 15px;
+            }
+
+            /* Main headings */
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            /* Banner */
+            .single-property-banner {
+                height: 180px;
+            }
+
+            .single-banner-content h1 {
+                font-size: 26px;
+            }
+
+            /* Property cards */
+            .property-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .property-card img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Property details */
+            .property-details-section {
+                padding: 30px 15px;
+            }
+
+            .details-villa-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .details-address {
+                font-size: 20px;
+            }
+
+            /* Feature box */
+            .details-feature-box {
+                margin-top: 25px;
+            }
+
+            /* Contact section */
+            .contact-map iframe {
+                height: 280px;
+            }
+
+            /* Pagination */
+            .pagination-section {
+                margin: 30px 0;
+            }
+
+            /* Footer */
+            .copyright-footer {
+                padding: 20px 10px;
+            }
+
+            .copyright-footer p {
+                font-size: 11px;
+            }
+
+        }
+
+
+        /* ================================
+   PROPERTIES PAGE RESPONSIVE CSS
+================================ */
+
+/* TABLET */
+@media (max-width: 991px) {
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+
+    .property-card {
+        height: 100%;
+    }
+
+    .property-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .property-filter {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 }
 
-.properties-section h2 {
-    font-size: 32px;
-    margin-top: 15px;
+/* MOBILE */
+@media (max-width: 767px) {
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+
+    .properties-banner {
+        height: 190px;
+        padding: 20px 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 27px;
+    }
+
+    .property-filter {
+        padding: 30px 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .properties-section {
+        padding: 30px 12px;
+    }
+
+    .properties-section h2 {
+        font-size: 25px;
+    }
+
+    .property-card {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .property-card img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+
+    .property-card .d-flex {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .property-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .visit-btn {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .copyright-footer {
+        padding: 20px 12px;
+    }
 }
 
-.property-card {
-    background-color: #fafafa;
-    padding: 20px;
-    border-radius: 10px;
-    height: 100%;
-}
+/* SMALL MOBILE */
+@media (max-width: 480px) {
 
-.property-card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 10px;
-}
+    .properties-banner {
+        height: 165px;
+    }
 
-.property-type {
-    background-color: #fbd9cf;
-    padding: 7px 12px;
-    border-radius: 5px;
-    font-size: 13px;
-}
+    .banner-content h1 {
+        font-size: 23px;
+    }
 
-.price {
-    color: #f35525;
-    font-weight: bold;
-}
+    .property-filter {
+        padding: 25px 10px;
+    }
 
-.property-card h5 {
-    font-size: 17px;
-    font-weight: bold;
-}
+    .filter-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
 
-.property-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
-    font-size: 13px;
-}
+    .properties-section h2 {
+        font-size: 22px;
+    }
 
-.visit-btn {
-    display: block;
-    margin: 20px auto 0;
-    background-color: #1e1e1e;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 25px;
-    cursor: pointer;
-}
+    .property-card {
+        padding: 12px;
+    }
 
-.visit-btn:hover {
-    background-color: #f35525;
-    transition: 0.3s;
-}
-.pagination-section {
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-}
+    .property-card img {
+        height: 200px;
+    }
 
-.pagination {
-    display: flex;
-    gap: 10px;
-}
-
-.pagination .page-link {
-    color: black;
-    background-color: #f1f1f1;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-}
-
-.pagination .page-link:hover,
-.pagination .page-item.active .page-link {
-    background-color: #f35525;
-    color: white;
-}
-.copyright-footer {
-    background-color: #1e1e1e;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    width: 100%;
-}
-
-.copyright-footer p {
-    font-size: 13px;
-    margin: 0;
-    line-height: 1.6;
+    .property-details {
+        font-size: 11px;
+    }
 }
     </style>
 
@@ -353,8 +635,7 @@
 
             <a class="navbar-brand" href="index.html">VILLA</a>
 
-            <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#villaNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#villaNav">
 
                 <span class="navbar-toggler-icon"></span>
 
@@ -419,277 +700,277 @@
     </section>
 
 
-   <!-- Properties Section -->
-<section class="properties-section py-5">
+    <!-- Properties Section -->
+    <section class="properties-section py-5">
 
-    <div class="container">
+        <div class="container">
 
-        <!-- Heading -->
-        <div class="text-center mb-5">
-            <p class="text-danger fw-bold">| PROPERTIES</p>
-            <h2 class="fw-bold">We Provide The Best Property You Like</h2>
+            <!-- Heading -->
+            <div class="text-center mb-5">
+                <p class="text-danger fw-bold">| PROPERTIES</p>
+                <h2 class="fw-bold">We Provide The Best Property You Like</h2>
+            </div>
+
+            <!-- Property Cards -->
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9" class="img-fluid"
+                            alt="Luxury villa">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Luxury Villa</span>
+                            <h5 class="price">$2,264,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">18 Old Street Miami, OR 97219</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>8</b></span>
+                            <span>Bathrooms: <b>8</b></span>
+                            <span>Area: <b>545m²</b></span>
+                            <span>Floor: <b>3</b></span>
+                            <span>Parking: <b>6 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" class="img-fluid"
+                            alt="Modern villa">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Modern Villa</span>
+                            <h5 class="price">$1,180,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">54 New Street Florida, USA</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>6</b></span>
+                            <span>Bathrooms: <b>5</b></span>
+                            <span>Area: <b>450m²</b></span>
+                            <span>Floor: <b>2</b></span>
+                            <span>Parking: <b>4 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" class="img-fluid"
+                            alt="Apartment">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Apartment</span>
+                            <h5 class="price">$1,460,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">26 Mid Street Portland, USA</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>5</b></span>
+                            <span>Bathrooms: <b>4</b></span>
+                            <span>Area: <b>320m²</b></span>
+                            <span>Floor: <b>2</b></span>
+                            <span>Parking: <b>3 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" class="img-fluid"
+                            alt="Family house">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Family House</span>
+                            <h5 class="price">$980,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">12 Hope Street Miami, USA</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>4</b></span>
+                            <span>Bathrooms: <b>3</b></span>
+                            <span>Area: <b>280m²</b></span>
+                            <span>Floor: <b>2</b></span>
+                            <span>Parking: <b>2 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f" class="img-fluid"
+                            alt="Luxury apartment">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Luxury Apartment</span>
+                            <h5 class="price">$1,250,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">22 New Avenue Florida, USA</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>5</b></span>
+                            <span>Bathrooms: <b>4</b></span>
+                            <span>Area: <b>350m²</b></span>
+                            <span>Floor: <b>3</b></span>
+                            <span>Parking: <b>3 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3" class="img-fluid"
+                            alt="Modern house">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Modern House</span>
+                            <h5 class="price">$1,560,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">34 Lake Road Miami, USA</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>6</b></span>
+                            <span>Bathrooms: <b>5</b></span>
+                            <span>Area: <b>420m²</b></span>
+                            <span>Floor: <b>3</b></span>
+                            <span>Parking: <b>4 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+                <!-- Card 7 - New -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" class="img-fluid"
+                            alt="Beautiful villa">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Beautiful Villa</span>
+                            <h5 class="price">$1,850,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">45 Green Avenue Miami, USA</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>7</b></span>
+                            <span>Bathrooms: <b>6</b></span>
+                            <span>Area: <b>500m²</b></span>
+                            <span>Floor: <b>3</b></span>
+                            <span>Parking: <b>5 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+                <!-- Card 8 - New -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154" class="img-fluid"
+                            alt="Contemporary home">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Contemporary Home</span>
+                            <h5 class="price">$1,320,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">67 Palm Street Florida, USA</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>5</b></span>
+                            <span>Bathrooms: <b>4</b></span>
+                            <span>Area: <b>380m²</b></span>
+                            <span>Floor: <b>2</b></span>
+                            <span>Parking: <b>3 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+                <!-- Card 9 - New -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" class="img-fluid"
+                            alt="Premium house">
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="property-type">Premium House</span>
+                            <h5 class="price">$2,050,000</h5>
+                        </div>
+
+                        <h5 class="mt-2">89 Ocean Road Miami, USA</h5>
+
+                        <div class="property-details">
+                            <span>Bedrooms: <b>8</b></span>
+                            <span>Bathrooms: <b>7</b></span>
+                            <span>Area: <b>560m²</b></span>
+                            <span>Floor: <b>3</b></span>
+                            <span>Parking: <b>6 spots</b></span>
+                        </div>
+
+                        <button class="visit-btn">Schedule a visit</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </section>
+    <div class="pagination-section">
+        <ul class="pagination">
 
-        <!-- Property Cards -->
-        <div class="row g-4">
+            <li class="page-item ">
+                <a class="page-link" href="index.html">1</a>
+            </li>
 
-            <!-- Card 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9"
-                         class="img-fluid" alt="Luxury villa">
+            <li class="page-item active">
+                <a class="page-link" href="properties.html">2</a>
+            </li>
 
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Luxury Villa</span>
-                        <h5 class="price">$2,264,000</h5>
-                    </div>
+            <li class="page-item">
+                <a class="page-link" href="property-details.html">3</a>
+            </li>
 
-                    <h5 class="mt-2">18 Old Street Miami, OR 97219</h5>
+            <li class="page-item">
+                <a class="page-link" href="contact.html">4</a>
+            </li>
 
-                    <div class="property-details">
-                        <span>Bedrooms: <b>8</b></span>
-                        <span>Bathrooms: <b>8</b></span>
-                        <span>Area: <b>545m²</b></span>
-                        <span>Floor: <b>3</b></span>
-                        <span>Parking: <b>6 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
-                         class="img-fluid" alt="Modern villa">
-
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Modern Villa</span>
-                        <h5 class="price">$1,180,000</h5>
-                    </div>
-
-                    <h5 class="mt-2">54 New Street Florida, USA</h5>
-
-                    <div class="property-details">
-                        <span>Bedrooms: <b>6</b></span>
-                        <span>Bathrooms: <b>5</b></span>
-                        <span>Area: <b>450m²</b></span>
-                        <span>Floor: <b>2</b></span>
-                        <span>Parking: <b>4 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
-                         class="img-fluid" alt="Apartment">
-
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Apartment</span>
-                        <h5 class="price">$1,460,000</h5>
-                    </div>
-
-                    <h5 class="mt-2">26 Mid Street Portland, USA</h5>
-
-                    <div class="property-details">
-                        <span>Bedrooms: <b>5</b></span>
-                        <span>Bathrooms: <b>4</b></span>
-                        <span>Area: <b>320m²</b></span>
-                        <span>Floor: <b>2</b></span>
-                        <span>Parking: <b>3 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
-                         class="img-fluid" alt="Family house">
-
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Family House</span>
-                        <h5 class="price">$980,000</h5>
-                    </div>
-
-                    <h5 class="mt-2">12 Hope Street Miami, USA</h5>
-
-                    <div class="property-details">
-                        <span>Bedrooms: <b>4</b></span>
-                        <span>Bathrooms: <b>3</b></span>
-                        <span>Area: <b>280m²</b></span>
-                        <span>Floor: <b>2</b></span>
-                        <span>Parking: <b>2 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f"
-                         class="img-fluid" alt="Luxury apartment">
-
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Luxury Apartment</span>
-                        <h5 class="price">$1,250,000</h5>
-                    </div>
-
-                    <h5 class="mt-2">22 New Avenue Florida, USA</h5>
-
-                    <div class="property-details">
-                        <span>Bedrooms: <b>5</b></span>
-                        <span>Bathrooms: <b>4</b></span>
-                        <span>Area: <b>350m²</b></span>
-                        <span>Floor: <b>3</b></span>
-                        <span>Parking: <b>3 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
-                         class="img-fluid" alt="Modern house">
-
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Modern House</span>
-                        <h5 class="price">$1,560,000</h5>
-                    </div>
-
-                    <h5 class="mt-2">34 Lake Road Miami, USA</h5>
-
-                    <div class="property-details">
-                        <span>Bedrooms: <b>6</b></span>
-                        <span>Bathrooms: <b>5</b></span>
-                        <span>Area: <b>420m²</b></span>
-                        <span>Floor: <b>3</b></span>
-                        <span>Parking: <b>4 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-            <!-- Card 7 - New -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
-                         class="img-fluid" alt="Beautiful villa">
-
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Beautiful Villa</span>
-                        <h5 class="price">$1,850,000</h5>
-                    </div>
-
-                    <h5 class="mt-2">45 Green Avenue Miami, USA</h5>
-
-                    <div class="property-details">
-                        <span>Bedrooms: <b>7</b></span>
-                        <span>Bathrooms: <b>6</b></span>
-                        <span>Area: <b>500m²</b></span>
-                        <span>Floor: <b>3</b></span>
-                        <span>Parking: <b>5 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-            <!-- Card 8 - New -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
-                         class="img-fluid" alt="Contemporary home">
-
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Contemporary Home</span>
-                        <h5 class="price">$1,320,000</h5>
-                    </div>
-
-                    <h5 class="mt-2">67 Palm Street Florida, USA</h5>
-
-                    <div class="property-details">
-                        <span>Bedrooms: <b>5</b></span>
-                        <span>Bathrooms: <b>4</b></span>
-                        <span>Area: <b>380m²</b></span>
-                        <span>Floor: <b>2</b></span>
-                        <span>Parking: <b>3 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-            <!-- Card 9 - New -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
-                         class="img-fluid" alt="Premium house">
-
-                    <div class="d-flex justify-content-between mt-3">
-                        <span class="property-type">Premium House</span>
-                        <h5 class="price">$2,050,000</h5>
-                    </div>
-
-                    <h5 class="mt-2">89 Ocean Road Miami, USA</h5>
-
-                    <div class="property-details">
-                        <span>Bedrooms: <b>8</b></span>
-                        <span>Bathrooms: <b>7</b></span>
-                        <span>Area: <b>560m²</b></span>
-                        <span>Floor: <b>3</b></span>
-                        <span>Parking: <b>6 spots</b></span>
-                    </div>
-
-                    <button class="visit-btn">Schedule a visit</button>
-                </div>
-            </div>
-
-        </div>
+        </ul>
     </div>
-</section>
-<div class="pagination-section">
-    <ul class="pagination">
 
-        <li class="page-item ">
-            <a class="page-link" href="index.html">1</a>
-        </li>
+    <footer class="copyright-footer">
 
-        <li class="page-item active">
-            <a class="page-link" href="properties.html">2</a>
-        </li>
+        <p>
+            Copyright © 2026 Villa Agency Co., Ltd. All Rights Reserved.
+        </p>
 
-        <li class="page-item">
-            <a class="page-link" href="property-details.html">3</a>
-        </li>
-
-        <li class="page-item">
-            <a class="page-link" href="contact.html">4</a>
-        </li>
-
-    </ul>
-</div>
-
-<footer class="copyright-footer">
-
-    <p>
-        Copyright © 2026 Villa Agency Co., Ltd. All Rights Reserved.
-    </p>
-
-</footer>
+    </footer>
 
 
 
