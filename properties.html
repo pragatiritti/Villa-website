@@ -257,6 +257,48 @@
     background-color: #f35525;
     transition: 0.3s;
 }
+.pagination-section {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination .page-link {
+    color: black;
+    background-color: #f1f1f1;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.pagination .page-link:hover,
+.pagination .page-item.active .page-link {
+    background-color: #f35525;
+    color: white;
+}
+.copyright-footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    width: 100%;
+}
+
+.copyright-footer p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.6;
+}
     </style>
 
 </head>
@@ -613,6 +655,36 @@
         </div>
     </div>
 </section>
+<div class="pagination-section">
+    <ul class="pagination">
+
+        <li class="page-item ">
+            <a class="page-link" href="index.html">1</a>
+        </li>
+
+        <li class="page-item active">
+            <a class="page-link" href="properties.html">2</a>
+        </li>
+
+        <li class="page-item">
+            <a class="page-link" href="property-details.html">3</a>
+        </li>
+
+        <li class="page-item">
+            <a class="page-link" href="contact.html">4</a>
+        </li>
+
+    </ul>
+</div>
+
+<footer class="copyright-footer">
+
+    <p>
+        Copyright © 2026 Villa Agency Co., Ltd. All Rights Reserved.
+    </p>
+
+</footer>
+
 
 
 
