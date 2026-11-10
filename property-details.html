@@ -306,6 +306,156 @@
     color: #aaa;
     margin: 0;
 }
+.deal-section {
+            width: 100%;
+            padding: 70px 8%;
+            background-color: white;
+        }
+
+        /* HEADER */
+
+        .deal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .deal-title span {
+            color: #f35525;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .deal-title h2 {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-top: 12px;
+            color: #1e1e1e;
+        }
+
+        /* TOP BUTTONS */
+
+        .deal-tabs {
+            display: flex;
+            gap: 12px;
+        }
+
+        .deal-tabs button {
+            background-color: #1e1e1e;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .deal-tabs button.active {
+            background-color: #f35525;
+        }
+
+        .deal-tabs button:hover {
+            background-color: #f35525;
+            transition: 0.3s;
+        }
+
+        /* THREE COLUMN LAYOUT */
+
+        .deal-content {
+            display: grid;
+            grid-template-columns: 220px minmax(250px, 1fr) 200px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* LEFT DETAILS BOX */
+
+        .property-details {
+            background-color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 17px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-row span {
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .detail-row strong {
+            font-size: 13px;
+            color: #1e1e1e;
+        }
+
+        /* MIDDLE IMAGE */
+
+        .deal-image {
+            width: 100%;
+            height: 300px;
+        }
+
+        .deal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* RIGHT INFORMATION */
+
+        .deal-info h4 {
+            font-size: 14px;
+            margin-bottom: 22px;
+            color: #1e1e1e;
+        }
+
+        .deal-info p {
+            font-size: 12px;
+            line-height: 1.8;
+            color: #777;
+            margin-bottom: 18px;
+        }
+
+        /* SCHEDULE BUTTON */
+
+        .schedule-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #1e1e1e;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 0 15px 0 0;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .schedule-btn span {
+            width: 38px;
+            height: 38px;
+            background-color: #f35525;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .schedule-btn:hover {
+            background-color: #f35525;
+        }
 .pagination-section {
     display: flex;
     justify-content: center;
@@ -624,6 +774,91 @@
     </div>
 
 </section>
+<section class="deal-section">
+
+        <!-- TOP HEADING AND BUTTONS -->
+        <div class="deal-header">
+
+            <div class="deal-title">
+                <span> | BEST DEAL</span>
+                <h2>Find Your Best Deal<br>Right Now!</h2>
+            </div>
+
+            <div class="deal-tabs">
+                <button class="active">Apartment</button>
+                <button>Villa House</button>
+                <button>Penthouse</button>
+            </div>
+
+        </div>
+
+        <!-- PROPERTY CONTENT -->
+        <div class="deal-content">
+
+            <!-- LEFT DETAILS BOX -->
+            <div class="property-details">
+
+                <div class="detail-row">
+                    <span>Total Flat Space</span>
+                    <strong>185 m2</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Floor number</span>
+                    <strong>26th</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Number of rooms</span>
+                    <strong>4</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Parking Available</span>
+                    <strong>Yes</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Payment Process</span>
+                    <strong>Bank</strong>
+                </div>
+
+            </div>
+
+            <!-- MIDDLE IMAGE -->
+            <div class="deal-image">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+                    alt="Modern apartment living room">
+            </div>
+
+            <!-- RIGHT INFORMATION -->
+            <div class="deal-info">
+
+                <h4>Extra Info About Property</h4>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua.
+                </p>
+
+                <p>
+                    When you need best facilities, you can
+                    simply type VILLA in your search engine
+                    website. In addition, you can enjoy the
+                    Portfolio, XYZ One Page Layouts, etc.
+                </p>
+
+                <button class="schedule-btn">
+                    <span><i class="fa-regular fa-calendar"></i></span>
+                    Schedule a visit
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
 <div class="pagination-section">
     <ul class="pagination">
 
