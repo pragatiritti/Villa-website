@@ -52,23 +52,30 @@
             margin-right: 8px;
         }
 
-        .top-right {
-            display: flex;
-            gap: 10px;
-        }
+        
+        .social-icons {
+    display: flex;
+    gap: 10px;
+}
 
-        .top-right a {
-            width: 22px;
-            height: 22px;
-            background-color: #ccc;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 11px;
-        }
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    background-color: #eeeeee;
+    color: #1e1e1e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #f35525;
+    color: white;
+    transform: translateY(-5px);
+}
 
         /* NAVBAR */
 
@@ -431,7 +438,7 @@
 
         </div>
 
-        <div class="top-right">
+        <div class="social-icons">
 
             <a href="#" aria-label="Facebook">
                 <i class="fa-brands fa-facebook-f"></i>
